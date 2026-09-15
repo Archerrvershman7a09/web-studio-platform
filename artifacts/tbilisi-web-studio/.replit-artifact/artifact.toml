@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Web Studio Georgia"
+description = "A premium multilingual studio platform for businesses in Georgia, with live concept demos, a detailed website brief wizard, transparent effort estimation, project workflow previews, and honest integration readiness tracking."
+version = "1.0.0"
+id = "artifacts/tbilisi-web-studio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18444
+
+[services.development]
+run = "pnpm --filter @workspace/tbilisi-web-studio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tbilisi-web-studio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/tbilisi-web-studio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18444"
+BASE_PATH = "/"
