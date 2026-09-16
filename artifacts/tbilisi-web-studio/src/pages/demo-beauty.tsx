@@ -1,3 +1,4 @@
-export default function DemoBeauty() {
-  return <div className="p-8">Beauty Demo</div>;
+import Demo from "./demo";
+export default function Page() {
+  return <Demo kind="beauty" />;
 }

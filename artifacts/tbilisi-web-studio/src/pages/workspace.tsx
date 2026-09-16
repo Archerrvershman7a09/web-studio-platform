@@ -1,3 +1,1 @@
-export default function Workspace() {
-  return <div className="p-8">Workspace</div>;
-}
+export { default } from "@/components/pending-feature";

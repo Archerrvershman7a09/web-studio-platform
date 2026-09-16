@@ -1,3 +1,4 @@
-export default function DemoCafe() {
-  return <div className="p-8">Cafe Demo</div>;
+import Demo from "./demo";
+export default function Page() {
+  return <Demo kind="cafe" />;
 }

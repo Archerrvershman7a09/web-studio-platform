@@ -1,3 +1,4 @@
+import { ConceptGallery } from "./home";
 export default function Works() {
-  return <div className="p-8">Works</div>;
+  return <ConceptGallery />;
 }

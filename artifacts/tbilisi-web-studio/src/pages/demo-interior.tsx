@@ -1,3 +1,4 @@
-export default function DemoInterior() {
-  return <div className="p-8">Interior Demo</div>;
+import Demo from "./demo";
+export default function Page() {
+  return <Demo kind="interior" />;
 }
