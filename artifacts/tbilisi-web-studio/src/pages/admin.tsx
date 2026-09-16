@@ -1,3 +1,1 @@
-export default function Admin() {
-  return <div className="p-8">Admin</div>;
-}
+export { default } from "@/components/pending-feature";
